@@ -61,8 +61,8 @@ export default function ParticleBackground() {
         }
 
         // 边界检查
-        if (this.x < 0 || this.x > canvas.width) this.speedX *= -1
-        if (this.y < 0 || this.y > canvas.height) this.speedY *= -1
+        if (this.x < 0 || (canvas && this.x > canvas.width)) this.speedX *= -1
+        if (this.y < 0 || (canvas && this.y > canvas.height)) this.speedY *= -1
       }
 
       draw() {
@@ -79,8 +79,8 @@ export default function ParticleBackground() {
     const particleCount = Math.min(50, Math.floor((window.innerWidth * window.innerHeight) / 20000))
 
     for (let i = 0; i < particleCount; i++) {
-      const x = Math.random() * canvas.width
-      const y = Math.random() * canvas.height
+      const x = Math.random() * (canvas?.width || window.innerWidth)
+      const y = Math.random() * (canvas?.height || window.innerHeight)
       particlesArray.push(new Particle(x, y))
     }
 
@@ -109,7 +109,7 @@ export default function ParticleBackground() {
 
     // 动画循环
     function animate() {
-      if (!ctx) return
+      if (!ctx || !canvas) return
 
       ctx.clearRect(0, 0, canvas.width, canvas.height)
 
