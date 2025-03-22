@@ -240,7 +240,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 
   // 翻译函数
   const t = (key: string): string => {
-    return translations[language][key] || key
+    return (translations[language] as TranslationEntry)[key] || key
   }
 
   return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
