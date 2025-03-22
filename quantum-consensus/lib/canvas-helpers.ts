@@ -35,8 +35,8 @@ export function checkBoundaries(
   canvas: HTMLCanvasElement | null, 
   callback: (hitX: boolean, hitY: boolean) => void
 ): void {
-  const hitX = x < 0 || (canvas && x > canvas.width);
-  const hitY = y < 0 || (canvas && y > canvas.height);
+  const hitX = x < 0 || (canvas ? x > canvas.width : false);
+  const hitY = y < 0 || (canvas ? y > canvas.height : false);
   callback(hitX, hitY);
 }
 
