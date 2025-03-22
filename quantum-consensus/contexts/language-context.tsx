@@ -48,10 +48,10 @@ const translations = {
     "founders.curtis.title": "联合创始人",
     "founders.curtis.description":
       "严琪博，量子共识联合创始人，软件工程学博士，专注于区块链共识算法与分布式系统研究。曾在国际顶级科技公司担任区块链架构师，致力于开发抗量子攻击的去中心化协议。",
-    "founders.weiye.name": "梁伟业 (Weiye Liang)",
+    "founders.weiye.name": "梁伟页 (Weiye Liang)",
     "founders.weiye.title": "联合创始人",
     "founders.weiye.description":
-      "梁伟业，量子共识联合创始人，密码学与金融科技专家，拥有丰富的Web3创业经验。曾在多家头部区块链项目担任技术顾问，对DAO治理和去中心化金融（DeFi）有深刻理解，推动量子安全技术落地。",
+      "梁伟页，量子共识联合创始人，密码学与金融科技专家，拥有丰富的Web3创业经验。曾在多家头部区块链项目担任技术顾问，对DAO治理和去中心化金融（DeFi）有深刻理解，推动量子安全技术落地。",
 
     // 核心技术
     "tech.title": "核心技术",
