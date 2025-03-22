@@ -4,13 +4,23 @@ import { createContext, useContext, useState, useEffect, type ReactNode } from "
 
 type Language = "zh" | "en"
 
+// 添加翻译条目类型定义
+type TranslationEntry = {
+  [key: string]: string;
+}
+
+// 添加翻译对象类型定义
+type TranslationsType = {
+  [key in Language]: TranslationEntry;
+}
+
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
   t: (key: string) => string
 }
 
-const translations = {
+const translations: TranslationsType = {
   zh: {
     // 导航
     "nav.about": "关于我们",
