@@ -76,8 +76,8 @@ export default function EnhancedHeroAnimation() {
           this.y += this.speedY
 
           // 边界检查
-          if (this.x < 0 || this.x > canvas.width) this.speedX *= -1
-          if (this.y < 0 || this.y > canvas.height) this.speedY *= -1
+          if (this.x < 0 || (canvas && this.x > canvas.width)) this.speedX *= -1
+          if (this.y < 0 || (canvas && this.y > canvas.height)) this.speedY *= -1
         }
 
         // 淡入淡出效果
