@@ -116,9 +116,4 @@ export {
   DialogFooter,
   DialogTitle,
   DialogDescription,
-}
-
-// Helper function for className merging
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(" ")
 } 
