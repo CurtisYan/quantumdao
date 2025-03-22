@@ -141,7 +141,7 @@ export default function EnhancedHeroAnimation() {
 
     // 绘制量子轨道
     function drawQuantumOrbits() {
-      if (!ctx) return
+      if (!ctx || !canvas) return
 
       // 绘制几个大的量子轨道
       const orbits = [
