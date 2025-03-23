@@ -17,7 +17,7 @@ npm install
 ```bash
 npm run dev
 ```
-开发服务器将在 http://localhost:3000 启动
+开发服务器将在 http://localhost:3002 启动
 
 ## 代码更新与部署流程
 
